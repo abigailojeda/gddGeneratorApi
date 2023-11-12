@@ -1,0 +1,35 @@
+*{
+    color: #66636F;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #F4F3F8;
+}
+
+h1{
+    text-align: center;
+    margin-top:8em;
+}
+
+a{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 239px;
+    height: 45px;
+    cursor: pointer;
+    background: #6633ff;
+    border-radius: 99px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 2.5em;
+}
+
+a:hover{
+    background: #7244fa;
+}
