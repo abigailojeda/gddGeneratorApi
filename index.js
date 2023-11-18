@@ -20,7 +20,7 @@ app.use(express.json());
 
 //routes
 app.use('/api/auth', require('./routes/auth'));
-//app.use('/api/project', require('./routes/project.routes'));
+app.use('/api/gdd', require('./routes/gdd'));
 
 //port
 app.listen(process.env.PORT, ()=>{
