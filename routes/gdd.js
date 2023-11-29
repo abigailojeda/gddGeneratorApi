@@ -13,7 +13,7 @@ const {
 
 const router = Router();
 
-router.post('/', createGdd);
+router.post('/:id', createGdd);
 
 router.get('/:id', getAllUserGdds);
 

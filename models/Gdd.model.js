@@ -18,6 +18,7 @@ const SubItemSchema = new Schema({
   const GddSchema = new Schema({
     user_id: String,
     project_name: String,
+    description: String,
     gameItems: [GameItemSchema],
   });
 

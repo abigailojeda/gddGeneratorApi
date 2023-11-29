@@ -3,15 +3,19 @@ const GddModel = require("../models/Gdd.model");
 
 //create project
 const createGdd = async (req, res) => {
-  const { project_name } = req.body;
+  const { user_id, project_name, description } = req.body; 
 
   try {
-    // GddModel
-    const dbGdd = new GddModel(req.body);
+    const gddData = {
+      user_id, 
+      project_name,
+      description
+    };
+
+    const dbGdd = new GddModel(gddData);
 
     await dbGdd.save();
 
-    // Response
     return res.status(201).json({
       ok: true,
       msg: 'GDD created',
@@ -25,7 +29,8 @@ const createGdd = async (req, res) => {
       msg: 'Error creating GDD'
     });
   }
-}
+};
+
 
 function getAllUserGdds(req, res) {
   const user_id = req.params.id;
